@@ -31,7 +31,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/"
+            path="/ClassRoom-Learning-Center"
             element={user ? <IndexHome /> : <Navigate to="/login" />}
           />
           <Route
