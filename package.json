@@ -1,7 +1,9 @@
 {
   "name": "learning",
   "private": true,
-  "version": "0.0.0","homepage": "http://antocraxx.github.io/ClassRoom-Learning-Center",
+  "version": "0.0.0",
+  
+  "homepage": "https://antocraxx.github.io/ClassRoom-Learning-Center/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

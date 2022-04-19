@@ -28,7 +28,6 @@ function App() {
     <Suspense fallback={<BeatLoader />}>
       <BrowserRouter>
         {user && <Headers />}
-
         <Routes>
           <Route
             path="/ClassRoom-Learning-Center"
