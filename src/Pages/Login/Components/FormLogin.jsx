@@ -50,7 +50,6 @@ function FormLogin() {
         </div>
       )}
       <div className="Login-cont">
-        {console.log(Errores)}
         <form action="" className="login-Form">
           <h4>Iniciar Sesion</h4>
           {Errores.length > 0 && <ErrorsGroup errors={Errores} />}

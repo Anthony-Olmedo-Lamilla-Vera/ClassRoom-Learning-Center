@@ -17,7 +17,6 @@ function IndexTask() {
   const [Entrega, setEntrega] = useState({});
   const [Cargado, setCargado] = useState(true);
   const { user, DatosUser } = useContext(contextUser);
-  console.log(idtarea);
   useEffect(() => {
     setCargado(true);
     const getTarea = async () => {
@@ -39,7 +38,6 @@ function IndexTask() {
     };
     getTarea();
   }, [idtarea]);
-  console.log(Entrega);
 
   return (
     <Headpage titulo="Tareas" descripcion={"Tareas para subir"}>

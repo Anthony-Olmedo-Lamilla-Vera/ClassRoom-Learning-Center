@@ -34,8 +34,14 @@ function App() {
             path="/"
             element={user ? <IndexHome /> : <Navigate to="/login" />}
           />
-          <Route path="/Materia/:idmateria" element={<IndexContenido />} />
-          <Route path="/task/:idtarea" element={<IndexTask />} />
+          <Route
+            path="/Materia/:idmateria"
+            element={user ? <IndexContenido /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/task/:idtarea"
+            element={user ? <IndexTask /> : <Navigate to="/login" />}
+          />
           <Route path="/Exam/:NameMateria/:idExamen" element={IndexExam} />
 
           <Route

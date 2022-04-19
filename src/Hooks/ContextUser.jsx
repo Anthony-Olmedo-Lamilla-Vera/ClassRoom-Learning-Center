@@ -5,7 +5,7 @@ import { URLGET, URLPOST } from "../Pages/Variables";
 export const contextUser = React.createContext();
 
 function ContextUser({ children }) {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
   const [DatosUser, setDatosUser] = useState([]);
   const parseJson = JSON.parse(window.localStorage.getItem("tokenUsuario"));
 
@@ -13,7 +13,7 @@ function ContextUser({ children }) {
     const GetUser = async () => {
       await axios
         .post(URLPOST + "userToken", {
-          token: parseJson.tokenUser,
+          token: parseJson?.tokenUser,
         })
         .then((data) => {
           setUser(true);
@@ -26,7 +26,7 @@ function ContextUser({ children }) {
     console.log(user);
     GetUser();
     GetItemUsuarios();
-  }, []);
+  }, [user]);
 
   const GetItemUsuarios = async () => {
     await axios

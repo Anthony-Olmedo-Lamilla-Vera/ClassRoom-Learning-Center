@@ -1,11 +1,13 @@
 {
   "name": "learning",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.0","homepage": "http://antocraxx.github.io/ClassRoom-Learning-Center",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "gh-pages": "^3.2.3",
     "vite": "^2.8.0"
   }
 }
